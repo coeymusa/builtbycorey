@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>OG card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #faf6ef; color: #14181f; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  .card {
+    width: 1200px; height: 630px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -180px;
+    width: 540px; height: 540px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(194,90,58,0.18), transparent 65%);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; left: -200px;
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(182,144,74,0.10), transparent 65%);
+  }
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative; z-index: 1;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px; font-weight: 500;
+    color: #14181f;
+  }
+  .brand em { font-style: italic; color: #c25a3a; font-weight: 500; }
+  .brand-mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px;
+    border-radius: 9px;
+    background: #14181f; color: #c25a3a;
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 600;
+    font-size: 22px; line-height: 1;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #c25a3a;
+    font-weight: 500;
+    background: rgba(194,90,58,0.10);
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(194,90,58,0.32);
+  }
+
+  .body {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; gap: 22px;
+    max-width: 1000px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: #14181f;
+  }
+  h1 em { font-style: italic; color: #c25a3a; font-weight: 500; }
+  .sub {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #4a4f5a;
+    max-width: 56ch;
+  }
+
+  .bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .url {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #14181f;
+  }
+  .url::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #c25a3a; }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6c6f78;
+  }
+
+  /* Long-title variant: smaller heading. Toggled via class on .card. */
+  .card.is-long h1 { font-size: 56px; }
+  .card.is-xl h1 { font-size: 52px; line-height: 1.08; }
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="top">
+    <div class="brand">
+      <span class="brand-mark">b</span>
+      <span>built by <em>corey</em></span>
+    </div>
+    <span class="tag" id="tag">Note · 01</span>
+  </div>
+  <div class="body">
+    <h1 id="title">Title goes here</h1>
+    <p class="sub" id="sub">Subtitle goes here.</p>
+  </div>
+  <div class="bottom">
+    <div class="url" id="url">builtbycorey.com</div>
+    <div class="meta" id="meta">May 2026</div>
+  </div>
+</div>
+<script>
+  const p = new URLSearchParams(location.search);
+  const title = p.get('title') || '';
+  const tag = p.get('tag') || 'Note';
+  const sub = p.get('sub') || '';
+  const url = p.get('url') || 'builtbycorey.com';
+  const meta = p.get('meta') || '';
+  document.getElementById('title').innerHTML = title;
+  document.getElementById('tag').textContent = tag;
+  document.getElementById('sub').textContent = sub;
+  document.getElementById('url').textContent = url;
+  document.getElementById('meta').textContent = meta;
+  // Auto-shrink long titles.
+  const card = document.getElementById('card');
+  if (title.length > 70) card.classList.add('is-xl');
+  else if (title.length > 50) card.classList.add('is-long');
+</script>
+</body>
+</html>

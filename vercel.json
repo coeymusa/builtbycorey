@@ -3,7 +3,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/case/mcu", "destination": "/case/mcu.html" }
+    { "source": "/case/mcu", "destination": "/case/mcu.html" },
+    { "source": "/case/mooncake", "destination": "/case/mooncake.html" },
+    { "source": "/case/rugby-unlocked", "destination": "/case/rugby-unlocked.html" },
+    { "source": "/case/promptmysite", "destination": "/case/promptmysite.html" },
+    { "source": "/case/lonsdale", "destination": "/case/lonsdale.html" },
+    { "source": "/notes/one-engineer", "destination": "/notes/one-engineer.html" },
+    { "source": "/notes/wordpress-rankings", "destination": "/notes/wordpress-rankings.html" },
+    { "source": "/notes/regulated-discipline", "destination": "/notes/regulated-discipline.html" },
+    { "source": "/notes/why-i-left-the-bank", "destination": "/notes/why-i-left-the-bank.html" }
   ],
   "headers": [
     {

@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mooncake · Case study · Built by Corey</title>
-  <meta name="description" content="How Mooncake — a cross-platform AI chat app with automatic context memory — was built end to end with React Native, Hono and Drizzle ORM." />
-  <meta property="og:title" content="Mooncake · Case study" />
-  <meta property="og:description" content="A cross-platform AI chat app with automatic context memory across conversations. React Native first, TypeScript, Hono, Drizzle. iOS and Android." />
+  <title>Rugby Unlocked · Case study · Built by Corey</title>
+  <meta name="description" content="How Rugby Unlocked grew from zero to 110 paying clubs and 400 active users without paid acquisition. Solo engineering, full P&L ownership, Next.js + Stripe stack." />
+  <meta property="og:title" content="Rugby Unlocked · Case study" />
+  <meta property="og:description" content="Identity and statistics for amateur rugby. 110 clubs, 400 users, zero paid acquisition. One engineer end-to-end." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://builtbycorey.com/case/mooncake" />
-  <meta property="og:image" content="https://builtbycorey.com/assets/og/case-mooncake.jpg" />
+  <meta property="og:url" content="https://builtbycorey.com/case/rugby-unlocked" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og/case-rugby-unlocked.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/case-mooncake.jpg" />
-  <link rel="canonical" href="https://builtbycorey.com/case/mooncake" />
+  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/case-rugby-unlocked.jpg" />
+  <link rel="canonical" href="https://builtbycorey.com/case/rugby-unlocked" />
   <meta name="theme-color" content="#faf6ef" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=2026-05-18e" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18g" />
   <style>
     .case-study { padding-top: clamp(48px, 6vw, 72px); }
     .case-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 24px; }
@@ -78,30 +78,30 @@
 
         <header class="case-masthead">
           <div class="rule">
-            <span class="folio">Case study &middot; &sect;02</span>
-            <span class="eyebrow">Mobile + AI &middot; 2025&ndash;</span>
+            <span class="folio">Case study &middot; &sect;03</span>
+            <span class="eyebrow">SaaS &middot; 2026&ndash;</span>
           </div>
-          <h1>A cross-platform <em>AI chat app</em> that remembers you.</h1>
+          <h1>A SaaS that grew to <em>110 clubs</em> on word of mouth.</h1>
           <p class="lede">
-            Mooncake is the AI chat app I&rsquo;d been waiting for someone else to build. Cross-platform from day one, automatic context memory across conversations, no &ldquo;forget what I said&rdquo; loops. React Native first, then iOS and Android, all on one codebase.
+            Rugby Unlocked is the identity and statistics platform for amateur rugby. I co-founded it, I run it, and I built it. Today it serves 400 active users and 40 paying clubs across 110 communities, with zero paid acquisition.
           </p>
         </header>
 
         <ul class="case-stats">
-          <li><b>1</b><span>Codebase across iOS, Android, and the web</span></li>
-          <li><b>Auto</b><span>Context memory, no manual prompt management</span></li>
-          <li><b>0</b><span>Backend servers I rent (Hono + edge runtime)</span></li>
-          <li><b>2</b><span>Stores pending release (App Store + Play Store)</span></li>
+          <li><b>110</b><span>Rugby clubs on the platform today</span></li>
+          <li><b>400</b><span>Active users, fully organic</span></li>
+          <li><b>40</b><span>Paying customers via Stripe</span></li>
+          <li><b>1</b><span>Engineer running the whole stack</span></li>
         </ul>
 
         <article class="case-grid">
           <header><h2 class="display">The <em>brief</em></h2></header>
           <div>
             <p>
-              The AI chat apps I used kept forgetting things I&rsquo;d told them ten minutes earlier. Every conversation felt like an introduction. I wanted an app that built up a quiet model of who I am and what I&rsquo;m working on across sessions, so I could pick up a thread three weeks later without re-explaining myself.
+              Amateur rugby is full of statistics that nobody owns. Try counts, tackle counts, season averages. Most clubs keep them in a coach's notebook or a WhatsApp message. A player who moves clubs has no record of what they did at the last one.
             </p>
             <p>
-              And I wanted it to run everywhere. Phone on the bus, tablet at the kitchen table, browser at the desk &mdash; same threads, same memory, no copy-paste between platforms.
+              The premise of Rugby Unlocked is that every amateur rugby player should own a portable identity and a running set of statistics that travels with them. The clubs they play for get coaching tools on top. Both sides win when the data is in one place.
             </p>
           </div>
         </article>
@@ -110,11 +110,11 @@
           <header><h2 class="display">What <em>shipped</em></h2></header>
           <div>
             <ul class="case-bullets">
-              <li><b>Cross-platform from day one.</b> React Native first, with the same codebase compiling to iOS, Android, and a web build. No platform-specific forks.</li>
-              <li><b>Automatic context memory.</b> A retrieval layer summarises and indexes prior conversations on the fly. The app remembers facts you&rsquo;ve mentioned, projects you&rsquo;re shipping, and people you&rsquo;ve named &mdash; without you ever managing a prompt.</li>
-              <li><b>Streaming responses.</b> Token-by-token rendering with cancel-mid-stream, retry, and message editing.</li>
-              <li><b>Tool calling.</b> The model can call a small set of internal tools (memory search, link preview, calculator) when the conversation needs it.</li>
-              <li><b>Account sync.</b> Threads, memory, and settings sync across devices the moment you sign in.</li>
+              <li><b>Player identity.</b> Every player has a profile that follows them across clubs and seasons. Match history, position history, statistics, and a verified link to the clubs they've played for.</li>
+              <li><b>Club tools.</b> Match-day team selection, attendance tracking, statistic recording per player per match, season summaries, and a coach view that reads like a coach actually wrote it.</li>
+              <li><b>Stripe-backed billing.</b> Per-club subscription, monthly invoices, automated retry on failed payments, dunning emails, all of it. The unpaid clubs drop down to the free tier without losing data.</li>
+              <li><b>Acquisition mechanic.</b> Every player invitation reaches a non-user and asks them to join. The conversion is high because the player who is being invited is already named on a match sheet.</li>
+              <li><b>Operator dashboard.</b> A small internal admin tool that lets me see growth, billing, and support volume on one screen. The same Next.js codebase as the product.</li>
             </ul>
           </div>
         </article>
@@ -123,10 +123,11 @@
           <header><h2 class="display">The <em>stack</em></h2></header>
           <div>
             <ul class="case-bullets">
-              <li><b>Frontend.</b> React Native, TypeScript, Expo router. Custom design system tuned for long reading sessions on phone and tablet.</li>
-              <li><b>Backend.</b> Hono on the edge runtime &mdash; sub-100ms cold starts, no server I have to babysit. TypeScript end-to-end so types flow from DB through API to UI.</li>
-              <li><b>Data.</b> Drizzle ORM over Postgres, with a memory index in the same database. One migration story, one source of truth.</li>
-              <li><b>AI.</b> Provider-agnostic chat layer with a streaming inference path and the memory-retrieval tool wired in as a callable.</li>
+              <li><b>Frontend &amp; backend.</b> Next.js with the App Router, TypeScript end-to-end, server components for the heavy reads, server actions for the writes.</li>
+              <li><b>Data.</b> Postgres with a careful schema. Every player, every match, every statistic is its own row with a foreign key to a club season. Reporting is real SQL, not aggregation in app code.</li>
+              <li><b>Billing.</b> Stripe Subscriptions with metered tiers per club, the customer portal for self-service downgrades, and a webhook listener that keeps the database in sync.</li>
+              <li><b>Hosting.</b> Vercel for the app. The whole thing runs on a single project with zero infrastructure to babysit.</li>
+              <li><b>Email.</b> Resend for transactional, custom templates for invitation flows and statistic-summary emails.</li>
             </ul>
           </div>
         </article>
@@ -135,16 +136,16 @@
           <header><h2 class="display">Why it <em>matters</em></h2></header>
           <div>
             <p>
-              Mooncake is the proof that the same engineer who ships regulated platforms can move fast on consumer mobile. The discipline travels: the audit-style logging that keeps a credit union out of trouble is the same discipline that turns an AI chat app into a reliable daily tool.
+              Rugby Unlocked is the proof that one engineer can build, run and grow a real SaaS without a marketing team, a sales hire, or outside capital. The product carries itself because the invitation flow is the marketing flow.
             </p>
             <p>
-              It also unlocks the React Native + edge stack for client work. When a customer asks for a cross-platform app with a real backend, this is the codebase the pattern came from.
+              It is also the live test bed for the patterns I use on client work. The Stripe wiring, the dunning logic, the multi-tenant data model, the operator admin tool, all of it has been load-tested by a live user base for months before it reaches a client project.
             </p>
           </div>
         </article>
 
         <div class="case-tail">
-          <p>Want a mobile app built like this?</p>
+          <p>Want a SaaS built and run like this?</p>
           <a class="btn btn-primary btn-lg" href="/#contact">Start a project</a>
         </div>
 
@@ -161,9 +162,8 @@
       </div>
       <div class="foot-meta">
         <span>&copy; <span id="year">2026</span> Corey Musa</span>
-        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://rugbyunlocked.com" target="_blank" rel="noopener">visit rugbyunlocked.com &rarr;</a>
         <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
-        <a href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin</a>
       </div>
     </div>
   </footer>

@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mooncake · Case study · Built by Corey</title>
-  <meta name="description" content="How Mooncake — a cross-platform AI chat app with automatic context memory — was built end to end with React Native, Hono and Drizzle ORM." />
-  <meta property="og:title" content="Mooncake · Case study" />
-  <meta property="og:description" content="A cross-platform AI chat app with automatic context memory across conversations. React Native first, TypeScript, Hono, Drizzle. iOS and Android." />
+  <title>PromptMySite · Case study · Built by Corey</title>
+  <meta name="description" content="How PromptMySite — an LLM agent platform with orchestration, tool calling, streaming inference and RAG — was built and shipped to live on Shopify with Stripe billing." />
+  <meta property="og:title" content="PromptMySite · Case study" />
+  <meta property="og:description" content="An LLM agent platform: orchestration, tool calling, streaming inference, multi-turn state, RAG pipeline. Live on Shopify with Stripe billing." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://builtbycorey.com/case/mooncake" />
-  <meta property="og:image" content="https://builtbycorey.com/assets/og/case-mooncake.jpg" />
+  <meta property="og:url" content="https://builtbycorey.com/case/promptmysite" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og/case-promptmysite.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/case-mooncake.jpg" />
-  <link rel="canonical" href="https://builtbycorey.com/case/mooncake" />
+  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/case-promptmysite.jpg" />
+  <link rel="canonical" href="https://builtbycorey.com/case/promptmysite" />
   <meta name="theme-color" content="#faf6ef" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=2026-05-18e" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18g" />
   <style>
     .case-study { padding-top: clamp(48px, 6vw, 72px); }
     .case-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 24px; }
@@ -78,30 +78,30 @@
 
         <header class="case-masthead">
           <div class="rule">
-            <span class="folio">Case study &middot; &sect;02</span>
-            <span class="eyebrow">Mobile + AI &middot; 2025&ndash;</span>
+            <span class="folio">Case study &middot; &sect;04</span>
+            <span class="eyebrow">LLM platform &middot; 2025&ndash;</span>
           </div>
-          <h1>A cross-platform <em>AI chat app</em> that remembers you.</h1>
+          <h1>An <em>LLM agent platform</em> that lives inside Shopify.</h1>
           <p class="lede">
-            Mooncake is the AI chat app I&rsquo;d been waiting for someone else to build. Cross-platform from day one, automatic context memory across conversations, no &ldquo;forget what I said&rdquo; loops. React Native first, then iOS and Android, all on one codebase.
+            PromptMySite is an LLM agent platform built to learn the stack from the inside. Orchestration, tool calling, streaming inference, multi-turn state, a real RAG pipeline. Live on Shopify with Stripe billing. Every pattern that turns up in client AI work was sharpened here first.
           </p>
         </header>
 
         <ul class="case-stats">
-          <li><b>1</b><span>Codebase across iOS, Android, and the web</span></li>
-          <li><b>Auto</b><span>Context memory, no manual prompt management</span></li>
-          <li><b>0</b><span>Backend servers I rent (Hono + edge runtime)</span></li>
-          <li><b>2</b><span>Stores pending release (App Store + Play Store)</span></li>
+          <li><b>0</b><span>External frameworks (no LangChain, no LlamaIndex)</span></li>
+          <li><b>Streaming</b><span>Tool calls + responses, both token-by-token</span></li>
+          <li><b>Stripe</b><span>Recurring billing through Shopify checkout</span></li>
+          <li><b>RAG</b><span>End-to-end retrieval pipeline, not a black box</span></li>
         </ul>
 
         <article class="case-grid">
           <header><h2 class="display">The <em>brief</em></h2></header>
           <div>
             <p>
-              The AI chat apps I used kept forgetting things I&rsquo;d told them ten minutes earlier. Every conversation felt like an introduction. I wanted an app that built up a quiet model of who I am and what I&rsquo;m working on across sessions, so I could pick up a thread three weeks later without re-explaining myself.
+              Every other LLM platform I tried hid the interesting parts behind a wrapper. I wanted to know what was actually happening inside the orchestration loop, what the trade-offs of tool calling look like at scale, and how the streaming protocol behaves when a long-running tool call runs over the timeout window.
             </p>
             <p>
-              And I wanted it to run everywhere. Phone on the bus, tablet at the kitchen table, browser at the desk &mdash; same threads, same memory, no copy-paste between platforms.
+              PromptMySite was the answer. Build the platform myself, ship it on top of Shopify so the customer journey is real, take real payments, and use the live traffic to keep the engineering honest.
             </p>
           </div>
         </article>
@@ -110,11 +110,12 @@
           <header><h2 class="display">What <em>shipped</em></h2></header>
           <div>
             <ul class="case-bullets">
-              <li><b>Cross-platform from day one.</b> React Native first, with the same codebase compiling to iOS, Android, and a web build. No platform-specific forks.</li>
-              <li><b>Automatic context memory.</b> A retrieval layer summarises and indexes prior conversations on the fly. The app remembers facts you&rsquo;ve mentioned, projects you&rsquo;re shipping, and people you&rsquo;ve named &mdash; without you ever managing a prompt.</li>
-              <li><b>Streaming responses.</b> Token-by-token rendering with cancel-mid-stream, retry, and message editing.</li>
-              <li><b>Tool calling.</b> The model can call a small set of internal tools (memory search, link preview, calculator) when the conversation needs it.</li>
-              <li><b>Account sync.</b> Threads, memory, and settings sync across devices the moment you sign in.</li>
+              <li><b>Custom orchestrator.</b> Multi-turn conversation state, tool registry, dispatch loop, and a streaming protocol that hands incremental tokens to the client while waiting on a tool result. No external framework.</li>
+              <li><b>Tool calling.</b> A small, sharp set of tools the model can call by name. Each one is type-checked, validated, and observable in the operator log.</li>
+              <li><b>RAG pipeline.</b> Document ingestion, chunking strategy tuned for prose, embedding generation, vector retrieval, and context-window assembly. Every step is replaceable.</li>
+              <li><b>Streaming all the way down.</b> Tokens stream from the model to the orchestrator to the Shopify storefront to the customer's screen. Tool results stream back in the same channel.</li>
+              <li><b>Shopify integration.</b> The product lives inside a Shopify store, so the checkout, customer portal, and recurring billing are all native. Stripe handles the cards. The customer never leaves the storefront.</li>
+              <li><b>Operator console.</b> A small admin UI that shows every conversation, every tool call, and every token. The first defence against silent regressions.</li>
             </ul>
           </div>
         </article>
@@ -123,10 +124,11 @@
           <header><h2 class="display">The <em>stack</em></h2></header>
           <div>
             <ul class="case-bullets">
-              <li><b>Frontend.</b> React Native, TypeScript, Expo router. Custom design system tuned for long reading sessions on phone and tablet.</li>
-              <li><b>Backend.</b> Hono on the edge runtime &mdash; sub-100ms cold starts, no server I have to babysit. TypeScript end-to-end so types flow from DB through API to UI.</li>
-              <li><b>Data.</b> Drizzle ORM over Postgres, with a memory index in the same database. One migration story, one source of truth.</li>
-              <li><b>AI.</b> Provider-agnostic chat layer with a streaming inference path and the memory-retrieval tool wired in as a callable.</li>
+              <li><b>Language.</b> TypeScript end-to-end. The type system is the only thing that makes streaming protocols and tool calls bearable to maintain.</li>
+              <li><b>Runtime.</b> A small Node service for orchestration, deployed alongside Shopify as a private app. The streaming protocol is plain SSE with structured events.</li>
+              <li><b>Storage.</b> Postgres for conversation state and ingested documents. A pgvector column for embeddings keeps the whole pipeline inside one database.</li>
+              <li><b>Models.</b> Provider-agnostic adapter. Today it speaks to Anthropic and OpenAI; swapping providers is a single file.</li>
+              <li><b>Commerce.</b> Shopify for the storefront and the checkout. Stripe for the recurring billing rail. The customer sees one branded flow.</li>
             </ul>
           </div>
         </article>
@@ -135,16 +137,16 @@
           <header><h2 class="display">Why it <em>matters</em></h2></header>
           <div>
             <p>
-              Mooncake is the proof that the same engineer who ships regulated platforms can move fast on consumer mobile. The discipline travels: the audit-style logging that keeps a credit union out of trouble is the same discipline that turns an AI chat app into a reliable daily tool.
+              PromptMySite is the engine room for every other AI project on this site. The orchestration loop, the streaming protocol, the RAG pipeline, the operator console, all of it was first written here under real traffic. By the time those patterns reach a client engagement they've been tested by paying customers for months.
             </p>
             <p>
-              It also unlocks the React Native + edge stack for client work. When a customer asks for a cross-platform app with a real backend, this is the codebase the pattern came from.
+              It is also the proof that you can ship a real AI product on a stack you fully understand, without renting your runtime to LangChain or your retrieval layer to a closed vendor. The platform is yours, the model is interchangeable, and the bill is a Stripe bill, not an API console you have to renew.
             </p>
           </div>
         </article>
 
         <div class="case-tail">
-          <p>Want a mobile app built like this?</p>
+          <p>Want an AI product built end-to-end?</p>
           <a class="btn btn-primary btn-lg" href="/#contact">Start a project</a>
         </div>
 
@@ -161,9 +163,8 @@
       </div>
       <div class="foot-meta">
         <span>&copy; <span id="year">2026</span> Corey Musa</span>
-        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://promptmysite.com" target="_blank" rel="noopener">visit promptmysite.com &rarr;</a>
         <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
-        <a href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin</a>
       </div>
     </div>
   </footer>

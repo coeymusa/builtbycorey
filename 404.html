@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found · Built by Corey</title>
+  <meta name="description" content="The page you were looking for doesn't exist (or it moved without telling anyone). Head back home or jump to one of the popular sections." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#faf6ef" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18g" />
+  <style>
+    .err {
+      min-height: calc(100vh - 80px);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: clamp(32px, 6vw, 96px);
+      padding: clamp(48px, 8vw, 120px) 0;
+    }
+    @media (max-width: 880px) { .err { grid-template-columns: 1fr; min-height: auto; } }
+
+    .err-num {
+      font-family: var(--ff-display);
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(8rem, 24vw, 18rem);
+      line-height: 0.85;
+      color: var(--accent);
+      letter-spacing: -0.04em;
+      margin: 0;
+      position: relative;
+    }
+    .err-num::after {
+      content: '';
+      position: absolute;
+      left: 8px; bottom: 18px;
+      width: 88%; height: 2px;
+      background: var(--accent);
+      opacity: 0.18;
+      border-radius: 2px;
+    }
+
+    .err-body { max-width: 56ch; }
+    .err-body .eyebrow { display: inline-block; margin-bottom: 1rem; }
+    .err-body h1 {
+      font-family: var(--ff-display);
+      font-weight: 500;
+      font-size: clamp(2rem, 3.6vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 1rem;
+    }
+    .err-body h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .err-body p {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--ink-mid);
+      margin: 0 0 1.5rem;
+      max-width: 50ch;
+    }
+
+    .err-routes {
+      list-style: none; padding: 0; margin: 1.5rem 0 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 520px;
+    }
+    @media (max-width: 480px) { .err-routes { grid-template-columns: 1fr; } }
+    .err-routes a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      color: var(--ink);
+      font-family: var(--ff-body);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: border-color .15s ease, transform .15s ease, color .15s ease;
+    }
+    .err-routes a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateX(2px);
+    }
+    .err-routes a span:last-child {
+      font-family: var(--ff-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+    }
+    .err-routes a:hover span:last-child { color: var(--accent); }
+
+    .err-foot {
+      margin-top: 2.5rem;
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .err-foot code {
+      font-family: var(--ff-mono);
+      background: var(--bg-deep);
+      border: 1px solid var(--rule);
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: var(--ink);
+      text-transform: none;
+      letter-spacing: 0.02em;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#err">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark">b</span>
+        <span class="brand-word">built by <em>corey</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#work">Work</a>
+        <a href="/#process">Principles</a>
+        <a href="/#places">Places</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-sm" href="/#contact">Start a project</a>
+    </div>
+  </header>
+
+  <main id="err">
+    <section class="section">
+      <div class="wrap err">
+        <div class="err-num" aria-hidden="true">404</div>
+        <div class="err-body">
+          <div class="eyebrow">Not found</div>
+          <h1>This page <em>moved</em>, retired, or never existed.</h1>
+          <p>
+            Most likely a stale link from somewhere. The site is small, so the route
+            you wanted is probably one of these.
+          </p>
+
+          <ul class="err-routes">
+            <li><a href="/"><span>Home</span><span>&rarr;</span></a></li>
+            <li><a href="/#work"><span>Selected work</span><span>&rarr;</span></a></li>
+            <li><a href="/#notes"><span>Notes</span><span>&rarr;</span></a></li>
+            <li><a href="/#process"><span>Principles</span><span>&rarr;</span></a></li>
+            <li><a href="/#places"><span>Places</span><span>&rarr;</span></a></li>
+            <li><a href="/#contact"><span>Start a project</span><span>&rarr;</span></a></li>
+          </ul>
+
+          <p class="err-foot">
+            Or email me directly <code>corey@builtbycorey.com</code>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">b</span>
+        <span>built by <em>corey</em> &middot; Z&uuml;rich</span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year">2026</span> Corey Musa</span>
+        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+</body>
+</html>

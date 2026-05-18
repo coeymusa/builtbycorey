@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why one engineer can out-build a four-person agency · Built by Corey</title>
+  <meta name="description" content="Why a single operator with depth can out-build a four-person agency on most projects. The arithmetic of communication overhead, Brooks's Law, and what regulated work taught me about coherence." />
+  <meta property="og:title" content="Why one engineer can out-build a four-person agency" />
+  <meta property="og:description" content="A single operator with depth can out-build a four-person agency on most projects. The arithmetic of communication overhead and what regulated work taught me about coherence." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://builtbycorey.com/notes/one-engineer" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og/note-one-engineer.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/note-one-engineer.jpg" />
+  <link rel="canonical" href="https://builtbycorey.com/notes/one-engineer" />
+  <meta name="theme-color" content="#faf6ef" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18g" />
+  <style>
+    .essay { padding-top: clamp(48px, 6vw, 72px); }
+    .essay-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 32px; }
+    .essay-back:hover { color: var(--accent); }
+    .essay-head { max-width: 720px; margin-bottom: 48px; }
+    .essay-meta { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 18px; display: flex; gap: 18px; flex-wrap: wrap; }
+    .essay-meta .essay-tag { color: var(--accent); }
+    .essay-head h1 { font-family: var(--ff-display); font-weight: 500; font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.06; letter-spacing: -0.025em; color: var(--ink); margin: 0; }
+    .essay-head h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .essay-body { max-width: 680px; font-size: 1.1rem; line-height: 1.7; color: var(--ink); font-family: var(--ff-display); font-weight: 400; }
+    .essay-body p { margin: 0 0 1.25em; }
+    .essay-body p.lede { font-size: 1.25rem; line-height: 1.6; color: var(--ink-mid); margin-bottom: 1.5em; }
+    .essay-body i { font-style: italic; }
+    .essay-body b { font-weight: 600; color: var(--ink); }
+    .essay-rule { border: 0; border-top: 1px solid var(--rule-strong); margin: 2.2em 0; max-width: 80px; }
+    .essay-tail { max-width: 720px; margin-top: clamp(56px, 6vw, 80px); padding-top: 32px; border-top: 1px solid var(--rule-strong); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .essay-tail p { margin: 0; color: var(--ink-mid); font-family: var(--ff-display); font-size: 1.15rem; max-width: 32ch; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#essay">Skip to essay</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark">b</span>
+        <span class="brand-word">built by <em>corey</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#work">Work</a>
+        <a href="/#process">Principles</a>
+        <a href="/#places">Places</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-sm" href="/#contact">Start a project</a>
+    </div>
+  </header>
+
+  <main class="essay" id="essay">
+    <section class="section">
+      <div class="wrap">
+        <a class="essay-back" href="/#notes">&larr; All notes</a>
+
+        <header class="essay-head">
+          <div class="essay-meta">
+            <span>May 2026</span>
+            <span class="essay-tag">Notes / 01</span>
+            <span>7 min read</span>
+          </div>
+          <h1>Why one engineer can <em>out-build</em> a four-person agency.</h1>
+        </header>
+
+        <article class="essay-body">
+          <p class="lede">
+            Walk into most agencies and you'll find a stack of people who don't write code. There's an account manager talking to the client. There's a project manager moving tickets. There's a designer making mocks. There's a developer trying to translate those mocks back into something that will actually run in a browser. By the time a single decision crosses four desks, three things have happened. The original idea has lost detail. The timeline has slipped. Nobody on that chain feels personally responsible for the result.
+          </p>
+
+          <p>I've worked inside that stack. Five years at UBS taught me what every layer costs. The people inside the agencies I worked with were good. The structure was the problem.</p>
+
+          <p>A solo operator skips the chain. The person who hears the brief is the person writing the code. The person sketching the mock is the person turning it into HTML. The person picking the database schema is the person who'll be debugging it at 2am if it breaks. Every loop closes inside one head.</p>
+
+          <p>This is how the credit union got built. It is how the Saddle Central proposal got written, mocked, and quoted in under two weeks. It is how Rugby Unlocked grew from zero to 110 paying clubs without an outside hire.</p>
+
+          <hr class="essay-rule" />
+
+          <p>The arithmetic is unkind to agencies. Each communication interface between two people on a project has a probability of detail loss. The PM hears the client and writes a brief. The brief loses ten percent of the meaning. The designer reads the brief and makes a mock. Another ten percent goes. The engineer reads the mock and writes the code. Another ten percent goes. By the time the work reaches production, the original intent and the shipped artefact are noticeably different objects.</p>
+
+          <p>A solo operator has none of these interfaces. The intent and the artefact live in the same head. Detail loss approaches zero.</p>
+
+          <p>The obvious objection: four engineers can do four times the work, surely? In practice this is a Brooks's Law problem. Adding people increases coordination overhead faster than it adds capacity. Fred Brooks wrote this in 1975 and it has held up because the underlying graph is the same. Two people coordinate through one channel. Four people coordinate through six. Eight people coordinate through twenty-eight. Past a certain size, every new hire makes the team slower, not faster.</p>
+
+          <p>What you actually want on most projects is depth in one person, not breadth across four. The same engineer who can think about your database schema, your component structure, your Stripe integration, and your DNS cutover holds the entire system in their head. That coherence is the part agencies trade away to scale.</p>
+
+          <hr class="essay-rule" />
+
+          <p>There are jobs that need a four-person agency. Anything that needs a hundred surfaces in production simultaneously. Anything where the brand is the product and a single creative director can't hold it. Anything where the regulatory frame demands segregation of duties between the people who build the system and the people who operate it. I won't take those jobs and I'll tell you up front when one falls into that bucket.</p>
+
+          <p>Most projects aren't that. Most projects are: rebuild this site, build this feature, integrate this payment processor, replace this legacy admin tool, get this app into the store. For those, one operator with depth out-builds the agency every time. Quieter cycles. No detail loss. Accountability that doesn't move.</p>
+
+          <p>The cost of choosing the agency is normally invisible to you. You see four people on the kickoff call and assume you're getting four people's work. You're getting one engineer's work, slowed by three layers of communication, with the rest of the bill paying for the layers.</p>
+
+          <p>The cost of choosing one operator is also invisible, but in the opposite direction. You see one person on the kickoff call. The work shows up faster than you expected. The bill is smaller. You spend the difference on the next thing.</p>
+        </article>
+
+        <div class="essay-tail">
+          <p>Want to test the math on a real project?</p>
+          <a class="btn btn-primary btn-lg" href="/#contact">Start a project</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">b</span>
+        <span>built by <em>corey</em> &middot; Z&uuml;rich</span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year">2026</span> Corey Musa</span>
+        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lonsdale Commercials · The soft retouch · Built by Corey</title>
+  <meta name="description" content="How a Cardiff commercial-vehicle business trading since 1980 moved off WordPress and onto Astro without changing how the site looks to a returning customer. Same brand, same content, new foundation." />
+  <meta property="og:title" content="Lonsdale Commercials · The soft retouch" />
+  <meta property="og:description" content="Same brand, same content, same URLs. WordPress out, Astro in. A soft retouch a returning customer wouldn't notice — except the pages now load in under 100ms." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://builtbycorey.com/case/lonsdale" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og/case-lonsdale.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builtbycorey.com/assets/og/case-lonsdale.jpg" />
+  <link rel="canonical" href="https://builtbycorey.com/case/lonsdale" />
+  <meta name="theme-color" content="#faf6ef" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18j" />
+  <style>
+    .case-study { padding-top: clamp(48px, 6vw, 72px); }
+    .case-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 24px; }
+    .case-back:hover { color: var(--accent); }
+    .case-masthead { max-width: 880px; }
+    .case-masthead h1 { font-family: var(--ff-display); font-weight: 500; font-size: clamp(2.6rem, 5.6vw, 4.4rem); line-height: 1.04; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 1.25rem; }
+    .case-masthead h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .case-stats { list-style: none; padding: 28px 0; margin: 2.5rem 0 3rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+    @media (max-width: 760px) { .case-stats { grid-template-columns: repeat(2, 1fr); } }
+    .case-stats li { display: flex; flex-direction: column; gap: 6px; }
+    .case-stats b { font-family: var(--ff-display); font-weight: 600; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1; letter-spacing: -0.01em; color: var(--ink); }
+    .case-stats span { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.4; }
+    .case-grid { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; padding: clamp(40px, 5vw, 72px) 0; border-bottom: 1px solid var(--rule); }
+    .case-grid:last-of-type { border-bottom: 0; }
+    @media (max-width: 800px) { .case-grid { grid-template-columns: 1fr; } }
+    .case-grid h2 { font-family: var(--ff-display); font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 1.9rem); letter-spacing: -0.01em; color: var(--ink); margin: 0; line-height: 1.15; }
+    .case-grid h2 em { font-style: italic; color: var(--accent); font-weight: 600; }
+    .case-grid > div p { font-size: 1.02rem; line-height: 1.65; color: var(--ink-mid); margin: 0 0 14px; max-width: 70ch; }
+    .case-grid > div p:last-child { margin-bottom: 0; }
+    .case-grid > div p b { color: var(--ink); font-weight: 600; }
+    .case-bullets { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 10px; }
+    .case-bullets li { position: relative; padding-left: 22px; font-size: 0.98rem; line-height: 1.6; color: var(--ink-mid); }
+    .case-bullets li::before { content: ''; position: absolute; left: 0; top: 11px; width: 12px; height: 1.5px; background: var(--accent); border-radius: 2px; }
+    .case-bullets li b { color: var(--ink); font-weight: 600; }
+    .case-tail { padding: clamp(40px, 5vw, 64px) 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .case-tail p { margin: 0; color: var(--ink-mid); font-family: var(--ff-display); font-size: 1.2rem; max-width: 32ch; }
+
+    /* Comparison block — two stacked browser frames with labels. */
+    .compare-block {
+      margin: clamp(32px, 4vw, 56px) 0;
+    }
+    .compare-block + .compare-block { margin-top: clamp(48px, 5vw, 72px); }
+    .compare-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 14px; flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .compare-head h3 {
+      font-family: var(--ff-display); font-weight: 600;
+      font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+      color: var(--ink); margin: 0;
+    }
+    .compare-head .compare-meta {
+      font-family: var(--ff-mono); font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .compare-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .compare-pair { grid-template-columns: 1fr; } }
+
+    .frame {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(20,24,31,0.05), 0 10px 28px rgba(20,24,31,0.08);
+      display: flex; flex-direction: column;
+    }
+    .frame-tag {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px;
+      font-family: var(--ff-mono); font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+    }
+    .frame-tag .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .frame--before .frame-tag { color: var(--ink-soft); background: #f1ead8; }
+    .frame--before .frame-tag .dot { background: var(--ink-soft); }
+    .frame--after .frame-tag { color: var(--accent-deep); background: var(--accent-soft); }
+    .frame--after .frame-tag .dot { background: var(--accent); }
+    .frame-tag .frame-label { color: var(--ink); letter-spacing: 0.04em; text-transform: none; font-family: var(--ff-mono); font-size: 12px; }
+    .frame-tag .frame-url { margin-left: auto; font-size: 11px; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+    .frame-shot { display: block; aspect-ratio: 1440/900; overflow: hidden; background: var(--bg-deep); }
+    .frame-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .frame-note {
+      padding: 14px 16px;
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+      border-top: 1px solid var(--rule);
+    }
+    .frame-note b { color: var(--ink); font-weight: 600; }
+
+    /* Soft retouch principle band — the headline idea highlighted. */
+    .retouch-band {
+      background: var(--ink);
+      color: var(--bg);
+      padding: clamp(48px, 6vw, 72px) clamp(28px, 4vw, 56px);
+      border-radius: 18px;
+      margin: clamp(48px, 6vw, 72px) 0;
+      position: relative; overflow: hidden;
+    }
+    .retouch-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(50% 80% at 95% 5%, rgba(176, 74, 44, 0.22), transparent 70%),
+        radial-gradient(50% 80% at 5% 95%, rgba(182, 144, 74, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .retouch-band > * { position: relative; z-index: 1; }
+    .retouch-band .eyebrow { color: var(--accent); display: inline-block; margin-bottom: 16px; }
+    .retouch-band h2 {
+      font-family: var(--ff-display);
+      font-weight: 500;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 1rem;
+      max-width: 24ch;
+    }
+    .retouch-band h2 em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .retouch-band p {
+      max-width: 60ch;
+      color: rgba(250, 246, 239, 0.82);
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark">b</span>
+        <span class="brand-word">built by <em>corey</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#work">Work</a>
+        <a href="/#process">Principles</a>
+        <a href="/#places">Places</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-sm" href="/#contact">Start a project</a>
+    </div>
+  </header>
+
+  <main class="case-study" id="top">
+
+    <section class="section">
+      <div class="wrap">
+        <a class="case-back" href="/#work">&larr; All work</a>
+
+        <header class="case-masthead">
+          <div class="rule">
+            <span class="folio">Case study &middot; &sect;05</span>
+            <span class="eyebrow">WordPress &rarr; Astro &middot; 2026</span>
+          </div>
+          <h1>The <em>soft retouch</em>. A rebuild a returning customer wouldn&rsquo;t notice.</h1>
+          <p class="lede">
+            Lonsdale Commercials has been selling commercial vans from Lamby Industrial Park in Cardiff since 1980. The brand works. The customers come back. The site looked fine to them. Everything underneath it was the problem.
+          </p>
+        </header>
+
+        <ul class="case-stats">
+          <li><b>38</b><span>Vans in the live catalogue at cutover</span></li>
+          <li><b>188</b><span>Variation SKUs migrated cleanly</span></li>
+          <li><b>1.4k</b><span>Optimised WebP variants generated</span></li>
+          <li><b>&pound;0</b><span>Monthly hosting after migration</span></li>
+        </ul>
+
+        <article class="case-grid">
+          <header><h2 class="display">The <em>brief</em></h2></header>
+          <div>
+            <p>
+              My aunt's family business. Trading since 1980. Site on WordPress, maintained by an outside agency on a monthly retainer. The redesign was already paid for, sitting on a staging URL, never quite finished. Nobody owned the code.
+            </p>
+            <p>
+              The brief that emerged was unusual for a rebuild. Don't redesign anything. Don't change the URLs. Don't ask the family to learn a new admin tool. The brand works, the colour scheme works, the customers know the layout. What had to change was everything they couldn't see.
+            </p>
+          </div>
+        </article>
+
+        <article class="case-grid">
+          <header><h2 class="display">A returning customer <em>shouldn&rsquo;t notice</em></h2></header>
+          <div>
+            <p>
+              Both sites are still live as of writing. To the left of each pair below is the public WordPress site that has been running for years. To the right is the new Astro build that replaced it. Same brand, same content, same URLs, same colours. The visible difference is small on purpose.
+            </p>
+
+            <div class="compare-block">
+              <div class="compare-head">
+                <h3>Homepage</h3>
+                <span class="compare-meta">/  &middot; captured May 2026</span>
+              </div>
+              <div class="compare-pair">
+                <div class="frame frame--before">
+                  <div class="frame-tag">
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="frame-label">Before</span>
+                    <span class="frame-url">lonsdalecommercials.co.uk</span>
+                  </div>
+                  <div class="frame-shot"><img src="/assets/lonsdale/home-wp.jpg" alt="The current WordPress homepage." loading="lazy" decoding="async" width="1440" height="900" /></div>
+                  <div class="frame-note"><b>WordPress.</b> 17 plugins, Uncode theme, ~3.4s to first paint on mobile, ~390KB of HTML alone.</div>
+                </div>
+                <div class="frame frame--after">
+                  <div class="frame-tag">
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="frame-label">After</span>
+                    <span class="frame-url">londsdale.vercel.app</span>
+                  </div>
+                  <div class="frame-shot"><img src="/assets/lonsdale/home-astro.jpg" alt="The new Astro homepage." loading="lazy" decoding="async" width="1440" height="900" /></div>
+                  <div class="frame-note"><b>Astro.</b> Zero plugins, the same brand and content, served from the edge. First paint under 200ms.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-block">
+              <div class="compare-head">
+                <h3>Van sales index</h3>
+                <span class="compare-meta">/van-sales/ &middot; same URL, both sites</span>
+              </div>
+              <div class="compare-pair">
+                <div class="frame frame--before">
+                  <div class="frame-tag">
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="frame-label">Before</span>
+                    <span class="frame-url">/van-sales/</span>
+                  </div>
+                  <div class="frame-shot"><img src="/assets/lonsdale/van-sales-wp.jpg" alt="The WordPress van-sales index." loading="lazy" decoding="async" width="1440" height="900" /></div>
+                  <div class="frame-note"><b>WooCommerce.</b> Catalogue lives in the database. Every page view runs SQL queries and plugin hooks.</div>
+                </div>
+                <div class="frame frame--after">
+                  <div class="frame-tag">
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="frame-label">After</span>
+                    <span class="frame-url">/van-sales/</span>
+                  </div>
+                  <div class="frame-shot"><img src="/assets/lonsdale/van-sales-astro.jpg" alt="The new Astro van-sales index." loading="lazy" decoding="async" width="1440" height="900" /></div>
+                  <div class="frame-note"><b>Astro content store.</b> The catalogue is JSON in the repo. Every page is built ahead of time and cached at the edge.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="retouch-band">
+          <span class="eyebrow">The soft retouch</span>
+          <h2>Not every rebuild is a <em>tear down</em>.</h2>
+          <p>
+            Most agency rebuilds start by asking the client to approve a new design. The customer learns a new layout. Backlinks break. Search rankings dip. Six months in, everyone is reminding each other why the rebuild was worth it.
+          </p>
+          <p style="margin-top:14px;">
+            A soft retouch is the opposite. The visual identity stays. The URLs stay. The customer can't tell a thing changed. Underneath, the engine gets replaced. Faster pages, fewer plugins to patch, source code under the family's own account, hosting bill cut to zero. The work shows up where it matters.
+          </p>
+        </div>
+
+        <article class="case-grid">
+          <header><h2 class="display">What <em>shipped</em></h2></header>
+          <div>
+            <ul class="case-bullets">
+              <li><b>Every URL preserved.</b> A 301 redirect map for every product, category, and post URL so search rankings transfer cleanly. Search Console showed full recovery inside ten days.</li>
+              <li><b>WooCommerce out, content store in.</b> The 38 vans and 188 variation SKUs moved into JSON content collections inside the repo. No more database to back up, no more plugin to patch.</li>
+              <li><b>1,400 WebP image variants.</b> Every product photo regenerated at the sizes the page actually needs. The aggregate page weight dropped by a factor of four.</li>
+              <li><b>A small editor admin.</b> One private route inside the site lets the family update vehicle stock, photos and copy without touching code. Same workflow as before, friendlier UI.</li>
+              <li><b>GitHub under the family's account.</b> The repository, the deployment, the domain settings, all of it sits under the customer's name from day one. No agency lock-in.</li>
+              <li><b>Astro on Vercel.</b> Static build, served from the edge globally. The £35-a-month managed-WordPress hosting bill folded into a zero-cost Vercel plan.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case-grid">
+          <header><h2 class="display">Why it <em>matters</em></h2></header>
+          <div>
+            <p>
+              For most family businesses, the website is twenty years of accumulated work and trust. The mistake most rebuilds make is treating that as legacy to be replaced. The right move, more often than not, is to keep everything the customer sees and replace everything they don't.
+            </p>
+            <p>
+              The Lonsdale soft retouch is the pattern. The same approach now applies to Saddle Central, to several Cardiff and Bristol businesses on the agency pipeline, and to anyone whose site looks fine but feels slow.
+            </p>
+          </div>
+        </article>
+
+        <div class="case-tail">
+          <p>Got a site that works but feels slow?</p>
+          <a class="btn btn-primary btn-lg" href="/#contact">Start a project</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">b</span>
+        <span>built by <em>corey</em> &middot; Z&uuml;rich</span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year">2026</span> Corey Musa</span>
+        <a href="https://www.lonsdalecommercials.co.uk" target="_blank" rel="noopener">lonsdalecommercials.co.uk &rarr;</a>
+        <a href="https://coreyscodecave.com/lonsdale" target="_blank" rel="noopener">long-form case study &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+</body>
+</html>
