@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Built by Corey · Production software for businesses that need it to ship</title>
+  <meta name="description" content="Corey Musa builds production-grade web, mobile, and platform software for businesses that need it to ship. Nine years on Credit Suisse and UBS wealth platforms. Now CTO of a regulated UK credit union, and shipping live products across mobile and web." />
+  <meta property="og:title" content="Built by Corey · Production software, shipped end-to-end" />
+  <meta property="og:description" content="Senior full-stack engineer. Nine years on Credit Suisse and UBS wealth platforms. CTO of a regulated UK credit union. Builds live products end-to-end." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://builtbycorey.com" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builtbycorey.com/assets/og.jpg" />
+  <meta name="theme-color" content="#faf6ef" />
+  <link rel="canonical" href="https://builtbycorey.com/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- JSON-LD structured data so Google + LinkedIn render this site as a
+       Person/ProfessionalService with the right facts. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://builtbycorey.com/#person",
+        "name": "Corey Musa",
+        "jobTitle": "Senior Full-Stack Engineer",
+        "url": "https://builtbycorey.com/",
+        "image": "https://builtbycorey.com/assets/corey.jpg",
+        "email": "corey@builtbycorey.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Zürich", "addressCountry": "CH" },
+        "alumniOf": "Newcastle University",
+        "knowsAbout": ["React", "TypeScript", "Java", "Spring Boot", "Astro", "Next.js", "React Native", "Open Banking", "AML/CFT", "OAuth2", "Regulated Fintech"],
+        "sameAs": [
+          "https://github.com/coeymusa",
+          "https://linkedin.com/in/corey-musa",
+          "https://coreyscodecave.com"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://builtbycorey.com/#service",
+        "name": "Built by Corey",
+        "url": "https://builtbycorey.com/",
+        "description": "Independent software studio building production web, mobile, and regulated platforms end-to-end.",
+        "founder": { "@id": "https://builtbycorey.com/#person" },
+        "areaServed": ["UK", "Switzerland", "Isle of Man", "EU"],
+        "priceRange": "££"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18e" />
+</head>
+<body>
+
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">b</span>
+        <span class="brand-word">built by <em>corey</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#process">Principles</a>
+        <a href="#places">Places</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="btn btn-sm" href="#contact">Start a project</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Independent software · Zürich</div>
+          <h1 class="display">
+            Production software for businesses that need it to <em>ship</em>.
+          </h1>
+          <p class="lede">
+            I'm Corey. Nine years building wealth-management platforms at Credit Suisse and UBS,
+            now CTO of a regulated credit union and shipping live products across mobile and web.
+            I take full ownership of what I build &mdash; from architecture through deployment.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a project</a>
+            <a class="btn btn-ghost" href="#work">See selected work</a>
+          </div>
+          <div class="hero-meta">
+            <span>British passport &middot; Swiss B permit</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>Available for new work</span>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <img src="/assets/corey.jpg" alt="Portrait of Corey Musa" loading="eager" />
+            <div class="portrait-tag">Corey Musa<br><span>Senior full-stack engineer</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS STRIP: subtle wordmark row, the institutions the work
+         has shipped through. No vendor logos — just text in their voice. -->
+    <section class="creds" aria-label="Places the work has shipped">
+      <div class="wrap">
+        <div class="creds-line">
+          <span class="creds-label">Shipped through</span>
+          <ul class="creds-list">
+            <li><span>UBS</span></li>
+            <li><span>Credit&nbsp;Suisse</span></li>
+            <li><span>Backbase</span></li>
+            <li><span>Smartstream</span></li>
+            <li><span>Manx&nbsp;Credit&nbsp;Union</span></li>
+            <li><span>RugbyUnlocked</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust">
+      <div class="wrap">
+        <div class="trust-rule"></div>
+        <ul class="trust-grid">
+          <li>
+            <strong>9 yrs</strong>
+            <span>shipping production financial systems</span>
+          </li>
+          <li>
+            <strong>UBS / CS</strong>
+            <span>full-stack across Switzerland, Spain, Italy, UK</span>
+          </li>
+          <li>
+            <strong>CTO</strong>
+            <span>of an IoMFSA-regulated UK credit union</span>
+          </li>
+          <li>
+            <strong>110 clubs</strong>
+            <span>on a SaaS I built and run solo</span>
+          </li>
+          <li>
+            <strong>Live</strong>
+            <span>React Native, Next.js, Astro and Angular in production</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RIGHT NOW: a hand-written sticky-note style status card. Slight skew,
+         off-axis, dated. Updated by hand whenever the world changes. -->
+    <section class="now-wrap">
+      <div class="wrap now-grid">
+        <div class="now-card">
+          <div class="now-head">
+            <span class="now-folio">&sect;01 &middot; Right now</span>
+            <span class="now-stamp">Updated <span class="now-date">May 2026</span></span>
+          </div>
+          <p class="now-line">
+            Building the underwriting-committee flow for the credit union and shipping a new
+            billing rotation for Rugby Unlocked. Half the week is on customer calls, half is
+            actually writing code &mdash; and that ratio is the whole point.
+          </p>
+          <ul class="now-list">
+            <li><b>Shipping this week</b> &mdash; MCU committee timeline, RU per-club invoice run.</li>
+            <li><b>Reading</b> &mdash; <i>The Goal</i>, Eli Goldratt. Theory of constraints, again.</li>
+            <li><b>Listening</b> &mdash; anything with a Spanish guitar in it.</li>
+            <li><b>Open to talk about</b> &mdash; Rust, Stripe billing edge cases, regulated overlays.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE TICKER: monospaced marquee, the kind of band you see on a status
+         page. Hardcoded today, hooks to a status feed later. -->
+    <section class="ticker" aria-label="Live shipping status">
+      <div class="ticker-rail">
+        <div class="ticker-track" aria-hidden="true">
+          <span class="ticker-set">
+            <span class="t-dot">&bull;</span> RUGBY UNLOCKED &nbsp;<i>400 users, 110 clubs</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> MOONCAKE &nbsp;<i>iOS build 0.4.2 in review</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> MCU &nbsp;<i>KYC pipeline live</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> PROMPTMYSITE &nbsp;<i>v3 streaming tools shipped</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> SADDLE CENTRAL &nbsp;<i>proposal accepted, build wk 1</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> REMOVEWHITESPACE &nbsp;<i>1.2k unique / month</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> CARIADLETTERS &nbsp;<i>daily Welsh love letters</i>
+            <span class="t-sep">/</span>
+          </span>
+          <span class="ticker-set" aria-hidden="true">
+            <span class="t-dot">&bull;</span> RUGBY UNLOCKED &nbsp;<i>400 users, 110 clubs</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> MOONCAKE &nbsp;<i>iOS build 0.4.2 in review</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> MCU &nbsp;<i>KYC pipeline live</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> PROMPTMYSITE &nbsp;<i>v3 streaming tools shipped</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> SADDLE CENTRAL &nbsp;<i>proposal accepted, build wk 1</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> REMOVEWHITESPACE &nbsp;<i>1.2k unique / month</i>
+            <span class="t-sep">/</span>
+            <span class="t-dot">&bull;</span> CARIADLETTERS &nbsp;<i>daily Welsh love letters</i>
+            <span class="t-sep">/</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I BUILD -->
+    <section class="section" id="offer">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule"><span class="eyebrow">What I build</span></div>
+          <h2 class="display h2">Three lanes. One operator. <em>Yours, end-to-end.</em></h2>
+          <p class="lede">
+            Most projects fall into one of three shapes. Each is delivered by the same person who
+            architected it, wrote it, and pushed it to production.
+          </p>
+        </header>
+
+        <div class="offers">
+          <article class="offer">
+            <div class="offer-num">01</div>
+            <h3>Site rebuilds</h3>
+            <p class="offer-desc">
+              WordPress, Squarespace or hand-rolled sites rebuilt mobile-first on Astro and
+              Vercel's edge. Faster pages, structured data Google can read, no plugin patch
+              cycles.
+            </p>
+            <ul class="offer-list">
+              <li>Fixed price, fixed timeline (~3 weeks)</li>
+              <li>Stripe Checkout if commerce is in scope</li>
+              <li>301-redirect every old URL &mdash; rankings come with you</li>
+            </ul>
+            <div class="offer-foot">
+              <span class="price">from &pound;2,000</span>
+              <a class="link" href="#contact">Talk about a rebuild &rarr;</a>
+            </div>
+          </article>
+
+          <article class="offer offer-feature">
+            <div class="offer-num">02</div>
+            <div class="offer-tag">Most common</div>
+            <h3>Custom platforms</h3>
+            <p class="offer-desc">
+              Full-stack web and mobile products built from a blank canvas. Auth, payments,
+              admin tools, audit trails, regulator-grade if you need it. React / TypeScript and
+              Spring Boot stack, the same one I run for the credit union.
+            </p>
+            <ul class="offer-list">
+              <li>Architecture, build, deploy &mdash; one engineer</li>
+              <li>Mobile (React Native) and web (Next.js / Angular) under one roof</li>
+              <li>Regulated overlays: AML/CFT, KYC, DSAR, audit chains</li>
+            </ul>
+            <div class="offer-foot">
+              <span class="price">scoped per project</span>
+              <a class="link" href="#contact">Scope a build &rarr;</a>
+            </div>
+          </article>
+
+          <article class="offer">
+            <div class="offer-num">03</div>
+            <h3>Site care</h3>
+            <p class="offer-desc">
+              Once it's live I keep it running. Hosting on Vercel (managed for you), content
+              updates, performance monitoring, security patches, uptime alerts and a monthly
+              health summary.
+            </p>
+            <ul class="offer-list">
+              <li>Six-month minimum, month-to-month after</li>
+              <li>Direct line to the person who built it</li>
+              <li>One agency. No subcontractors, no handoffs</li>
+            </ul>
+            <div class="offer-foot">
+              <span class="price">&pound;150 / month</span>
+              <a class="link" href="#contact">Get care &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section bg-paper" id="work">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule"><span class="eyebrow">Selected work</span></div>
+          <h2 class="display h2">Things shipped &mdash; with <em>real users</em> on them today.</h2>
+          <p class="lede">
+            A representative cut. Production sites, regulated platforms, AI products and a
+            growing SaaS &mdash; all owned end-to-end by me.
+          </p>
+        </header>
+
+        <div class="work-grid">
+
+          <a class="case case-large case-link" href="/case/mcu">
+            <div class="case-head">
+              <span class="case-kind">Regulated platform</span>
+              <span class="case-year">2025&ndash;</span>
+            </div>
+            <h3>Manx Credit Union</h3>
+            <p class="case-line">
+              The operating system of an IoMFSA-regulated UK credit union. Member portal, full
+              loan lifecycle, AML/CFT operations, SHA-256 audit chains, in-product regulator
+              training, one-click inspection-pack export.
+            </p>
+            <ul class="case-meta">
+              <li>Angular 19 &middot; Spring Boot 3 &middot; Java 21</li>
+              <li>Custom Spring Authorization Server</li>
+              <li>Open-banking via Yapily</li>
+            </ul>
+            <span class="case-role">Co-founder &amp; CTO &middot; <span class="case-link-cta">Read the case study &rarr;</span></span>
+          </a>
+
+          <a class="case case-link" href="/case/mooncake">
+            <div class="case-head">
+              <span class="case-kind">Mobile + AI</span>
+              <span class="case-year">2025&ndash;</span>
+            </div>
+            <h3>Mooncake</h3>
+            <p class="case-line">
+              Cross-platform AI chat app with automatic context memory across conversations.
+              React Native first, TypeScript, Hono and Drizzle ORM. iOS and Android pending store
+              release.
+            </p>
+            <ul class="case-meta">
+              <li>React Native &middot; Hono &middot; Drizzle</li>
+              <li>Memory + tool calling pipeline</li>
+              <li>getmooncake.com</li>
+            </ul>
+            <span class="case-role">Solo build &middot; <span class="case-link-cta">case study &rarr;</span></span>
+          </a>
+
+          <a class="case case-link" href="https://rugbyunlocked.com" target="_blank" rel="noopener">
+            <div class="case-head">
+              <span class="case-kind">SaaS</span>
+              <span class="case-year">2026&ndash;</span>
+            </div>
+            <h3>Rugby Unlocked</h3>
+            <p class="case-line">
+              Identity and statistics platform for amateur rugby. Grew organically to 400 users
+              and 40 paying across 110 clubs, no paid acquisition. I own architecture, billing
+              and ongoing ops.
+            </p>
+            <ul class="case-meta">
+              <li>Next.js &middot; Stripe billing</li>
+              <li>Sole engineer, full P&amp;L</li>
+              <li>rugbyunlocked.com</li>
+            </ul>
+            <span class="case-role">Co-founder &middot; <span class="case-link-cta">visit site &rarr;</span></span>
+          </a>
+
+          <a class="case case-link" href="https://promptmysite.com" target="_blank" rel="noopener">
+            <div class="case-head">
+              <span class="case-kind">LLM platform</span>
+              <span class="case-year">2025&ndash;</span>
+            </div>
+            <h3>PromptMySite</h3>
+            <p class="case-line">
+              LLM agent platform: orchestration, tool calling, streaming inference, multi-turn
+              state, RAG pipeline. Live on Shopify with Stripe billing.
+            </p>
+            <ul class="case-meta">
+              <li>TypeScript &middot; Shopify &middot; Stripe</li>
+              <li>RAG &middot; streaming inference</li>
+              <li>promptmysite.com</li>
+            </ul>
+            <span class="case-role">Solo build &middot; <span class="case-link-cta">visit site &rarr;</span></span>
+          </a>
+
+          <a class="case case-link" href="https://coreyscodecave.com/lonsdale" target="_blank" rel="noopener">
+            <div class="case-head">
+              <span class="case-kind">WordPress &rarr; Astro</span>
+              <span class="case-year">2026</span>
+            </div>
+            <h3>Lonsdale Commercials</h3>
+            <p class="case-line">
+              A Cardiff family business trading since 1980 migrated off WordPress and an agency
+              retainer onto Astro and Vercel. Same brand, same content, different stewardship
+              &mdash; the GitHub repo now sits under their account.
+            </p>
+            <ul class="case-meta">
+              <li>38 vans &middot; 188 variation SKUs &middot; 1.4k WebP variants</li>
+              <li>&pound;0 monthly hosting after cutover</li>
+              <li>One-person migration, May 2026</li>
+            </ul>
+            <span class="case-role">Solo build &middot; <span class="case-link-cta">case study &rarr;</span></span>
+          </a>
+
+        </div>
+
+        <div class="work-foot">
+          <p>
+            More public experiments and side projects live at
+            <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVIDENCE PLAN: a single tall preview of a real proposal,
+         rendered in a fake browser chrome and linking to the live deploy. -->
+    <section class="section" id="pitch">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule">
+            <span class="folio">&sect;04</span>
+            <span class="eyebrow">A real proposal, in your inbox</span>
+          </div>
+          <h2 class="display h2">Every project starts with a written, evidenced plan.</h2>
+          <p class="lede">
+            Before you spend a pound, you get a proposal that walks your current site, names
+            specific issues, costs them in lost revenue, and lays out a phased fix with fixed
+            pricing. Below: the May 2026 Saddle Central proposal, published on the web &mdash;
+            exactly as it landed in the client&rsquo;s inbox.
+          </p>
+        </header>
+
+        <a class="pitch-feature" href="https://saddle-central-pitch.vercel.app/" target="_blank" rel="noopener">
+          <div class="pitch-preview">
+            <div class="browser-chrome" aria-hidden="true">
+              <span class="bc-dots"><i></i><i></i><i></i></span>
+              <span class="bc-url">saddle-central-pitch.vercel.app</span>
+            </div>
+            <div class="pitch-shot">
+              <img src="/assets/saddle-central-pitch.jpg" alt="The May 2026 Saddle Central proposal as published online." loading="lazy" />
+              <div class="pitch-shot-fade" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <aside class="pitch-summary">
+            <span class="pitch-stamp">Exhibit A &middot; May 2026</span>
+            <h3>Saddle Central &middot; WordPress &rarr; Astro</h3>
+            <p>
+              A crawl of the current site, written up over 1,400 words and a full set of mocks.
+              Nine specific findings, each with observed behaviour, commercial impact, root
+              cause, and the post-migration fix. A phased plan, a fixed price, and a parity
+              table that translates &ldquo;I&rsquo;m killing WooCommerce&rdquo; into
+              &ldquo;here&rsquo;s what stays the same and here&rsquo;s what gets better.&rdquo;
+            </p>
+            <ul class="pitch-stats">
+              <li>
+                <b>9</b>
+                <span>Findings, each costed in lost revenue</span>
+              </li>
+              <li>
+                <b>3</b>
+                <span>Mocked-up rebuilt screens (home, product, fitting)</span>
+              </li>
+              <li>
+                <b>&pound;2,000</b>
+                <span>Fixed price, 21&ndash;25 working days</span>
+              </li>
+            </ul>
+            <span class="pitch-cta">Read the full proposal <span class="arrow">&rarr;</span></span>
+          </aside>
+        </a>
+
+        <div class="pitch-foot">
+          <a class="btn btn-ghost" href="#contact">Get a proposal like this for your site</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATING PRINCIPLES: manifesto in numbered rows. Big serif, lots of
+         breathing room. Different rhythm to the rest of the page on purpose. -->
+    <section class="section bg-paper" id="process">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule">
+            <span class="folio">&sect;05</span>
+            <span class="eyebrow">Operating principles</span>
+          </div>
+          <h2 class="display h2">How I work, written down so you can hold me to it.</h2>
+        </header>
+
+        <ol class="principles">
+          <li>
+            <span class="principle-num">01</span>
+            <div>
+              <h4>The person who quotes is the person who ships.</h4>
+              <p>No salesperson, no project manager standing between us. You get the engineer who will write the code from the first call onwards.</p>
+            </div>
+          </li>
+          <li>
+            <span class="principle-num">02</span>
+            <div>
+              <h4>Fixed price, fixed scope, fixed timeline.</h4>
+              <p>If I can&rsquo;t put a number on it, it&rsquo;s a research project &mdash; and you&rsquo;ll see why on day one, before any money moves.</p>
+            </div>
+          </li>
+          <li>
+            <span class="principle-num">03</span>
+            <div>
+              <h4>Source code is yours from day one.</h4>
+              <p>The repo lives in your GitHub org from the first commit. Nothing locked behind an agency portal, no proprietary admin to learn.</p>
+            </div>
+          </li>
+          <li>
+            <span class="principle-num">04</span>
+            <div>
+              <h4>Boring stack on purpose.</h4>
+              <p>React, TypeScript, Java/Spring, Postgres, Astro. The same stack the bank uses. Stuff your next engineer can read on the train home.</p>
+            </div>
+          </li>
+          <li>
+            <span class="principle-num">05</span>
+            <div>
+              <h4>Regulated is the floor, not the ceiling.</h4>
+              <p>Audit trails, retention engines, KYC pipelines &mdash; same hygiene whether you&rsquo;re an Isle of Man credit union or a Cardiff bakery. The discipline travels.</p>
+            </div>
+          </li>
+          <li>
+            <span class="principle-num">06</span>
+            <div>
+              <h4>Show, don&rsquo;t bill.</h4>
+              <p>Daily preview deployments on Vercel. You can click the work before you sign the next invoice. No <i>"trust me, it&rsquo;s coming"</i>.</p>
+            </div>
+          </li>
+        </ol>
+
+        <!-- DECLINE LIST: ASCII-style box. Counter-positioning. -->
+        <div class="decline">
+          <div class="decline-head">
+            <span class="folio">&sect;05.5</span>
+            <span>Things I will politely decline</span>
+          </div>
+          <ul class="decline-list">
+            <li><span class="x">&minus;</span> Hourly billing on the build phase.</li>
+            <li><span class="x">&minus;</span> Re-engagements on a project I didn&rsquo;t originally ship.</li>
+            <li><span class="x">&minus;</span> Anything where I&rsquo;d be the third agency.</li>
+            <li><span class="x">&minus;</span> &ldquo;Build it to flip it&rdquo; briefs &mdash; I&rsquo;d rather build to keep.</li>
+            <li><span class="x">&minus;</span> AI features bolted on for the sake of a deck.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACES: cities I've shipped from with what was shipped there.
+         Timeline-rail layout, a different shape to any other section. -->
+    <section class="section places-wrap" id="places">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule">
+            <span class="folio">&sect;06</span>
+            <span class="eyebrow">Places I&rsquo;ve shipped from</span>
+          </div>
+          <h2 class="display h2">A career in five cities and one island.</h2>
+        </header>
+        <ol class="places-list">
+          <li>
+            <div class="place-city">
+              <span class="place-pin"></span>
+              <span class="place-name">Bristol</span>
+              <span class="place-years">2017&ndash;2018</span>
+            </div>
+            <p>Smartstream graduate ladder. Java microservices, the boring fundamentals, the kind of two-year tour where you learn to ship before you learn to argue about how to ship.</p>
+          </li>
+          <li>
+            <div class="place-city">
+              <span class="place-pin"></span>
+              <span class="place-name">Cardiff</span>
+              <span class="place-years">2019&ndash;2020</span>
+            </div>
+            <p>Backbase, as the first full-stack hire. Built the reusable micro-frontend library every credit union and bank client ran on. Shipped the payments security layer (SMS OTP, device OOB, Keycloak) into production at multiple regulated institutions.</p>
+          </li>
+          <li>
+            <div class="place-city">
+              <span class="place-pin"></span>
+              <span class="place-name">Z&uuml;rich</span>
+              <span class="place-years">2020&ndash;2025</span>
+            </div>
+            <p>Five years on Credit Suisse and then UBS wealth management. Frontend consultant to Assistant Vice President to Associate Director. Led the React / TypeScript full-stack delivery for the EMEA wealth platform through the largest banking consolidation in Swiss history.</p>
+          </li>
+          <li>
+            <div class="place-city">
+              <span class="place-pin place-pin-current"></span>
+              <span class="place-name">Everywhere</span>
+              <span class="place-years">2025&ndash;</span>
+            </div>
+            <p>Independent studio. Mooncake, PromptMySite, RugbyUnlocked, the agency client work, this site. Half the week on customer calls, half on actual code &mdash; on purpose.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ASK ME ABOUT: pill cloud. No card frame. Loose, conversational. -->
+    <section class="section ask-wrap" id="ask">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule">
+            <span class="folio">&sect;07</span>
+            <span class="eyebrow">Ask me about</span>
+          </div>
+          <h2 class="display h2">If any of these light you up, we&rsquo;ll get along.</h2>
+        </header>
+        <ul class="pill-cloud">
+          <li>React Native first</li>
+          <li>Spring Authorization Server internals</li>
+          <li>signals vs ngrx</li>
+          <li>open banking via Yapily</li>
+          <li>IoMFSA inspection packs</li>
+          <li>SHA-256 audit chains</li>
+          <li class="pill-warm">why I left the bank</li>
+          <li>RAG pipelines without LangChain</li>
+          <li>Stripe billing edge cases</li>
+          <li>monorepos that don&rsquo;t hurt</li>
+          <li>Welsh poetry</li>
+          <li>sourdough</li>
+          <li>the offside line</li>
+          <li class="pill-warm">how to fire a plugin without losing rankings</li>
+          <li>Astro &amp; the death of WordPress</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-copy">
+            <div class="eyebrow">About</div>
+            <h2 class="display h2">Nine years on regulated platforms.
+              <em>Now building the same quality for businesses outside the bank.</em></h2>
+            <p>
+              I started on a graduate programme at Smartstream in Bristol, joined Backbase in
+              Cardiff as their first full-stack hire, then spent five years on the consolidated
+              UBS EMEA wealth-management platform &mdash; through the largest banking
+              consolidation in Swiss history &mdash; rising from contract architect to Associate
+              Director.
+            </p>
+            <p>
+              I now run my own studio in Z&uuml;rich. I&rsquo;m CTO of an IoMFSA-regulated UK
+              credit union, co-founder of a rugby SaaS with users across 110 clubs, and I ship
+              production React Native, Next.js and Astro products under my own brand.
+            </p>
+            <p>
+              The thread through all of it is the same: take full ownership, ship to real users,
+              and treat regulated standards as the floor rather than the ceiling.
+            </p>
+
+            <div class="cred-grid">
+              <div>
+                <span class="cred-label">Stack</span>
+                <span>React / TypeScript &middot; React Native &middot; Next.js &middot; Astro &middot; Angular 19 &middot; Java 21 / Spring Boot 3 &middot; PostgreSQL &middot; AWS</span>
+              </div>
+              <div>
+                <span class="cred-label">Regulated</span>
+                <span>OAuth2 / OIDC &middot; AML/CFT &middot; KYC / CDD audit trails &middot; FCA Consumer Duty &middot; IoMFSA frameworks &middot; SHA-256 audit chains</span>
+              </div>
+              <div>
+                <span class="cred-label">Education</span>
+                <span>BSc Computer Science, Newcastle University &middot; 2014&ndash;2017</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a class="btn btn-ghost" href="/assets/Corey_Musa_CV.pdf" target="_blank" rel="noopener">Download full CV (PDF)</a>
+              <a class="link" href="https://github.com/coeymusa" target="_blank" rel="noopener">github.com/coeymusa &rarr;</a>
+              <a class="link" href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin &rarr;</a>
+            </div>
+          </div>
+
+          <aside class="about-side">
+            <div class="quote-block">
+              <p class="quote">
+                &ldquo;Take full ownership of what I build, from architecture through deployment.&rdquo;
+              </p>
+              <p class="quote-by">&mdash; from the CV, and it is the operating principle.</p>
+            </div>
+            <ul class="resume-list">
+              <li><span>2025&ndash;</span> Independent &middot; Z&uuml;rich</li>
+              <li><span>2025&ndash;</span> Co-founder &amp; CTO &middot; Manx Credit Union</li>
+              <li><span>2026&ndash;</span> Co-founder &middot; Rugby Unlocked</li>
+              <li><span>2020&ndash;2025</span> Credit Suisse / UBS &middot; Z&uuml;rich</li>
+              <li><span>2019&ndash;2020</span> Backbase &middot; Cardiff</li>
+              <li><span>2017&ndash;2018</span> Smartstream &middot; Bristol</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: pre-empts the back-and-forth, sits right before the CTA. -->
+    <section class="section faq-wrap" id="faq">
+      <div class="wrap">
+        <header class="section-head">
+          <div class="rule">
+            <span class="folio">&sect;08</span>
+            <span class="eyebrow">Before you ask</span>
+          </div>
+          <h2 class="display h2">The questions every reasonable client asks first.</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>How long does a typical project take?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Site rebuilds run 21&ndash;25 working days from go-ahead to public cutover. Custom platforms are scoped per project, but a useful rule of thumb is six to twelve weeks for a first production version. Either way, you&rsquo;ll see daily preview deployments on Vercel during the build &mdash; you&rsquo;re never waiting on a status update.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can you work alongside our existing agency?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Yes, with one caveat: I won&rsquo;t be the third agency on a project. If you already have a brand or design partner, they keep the brand and design lane and I take engineering end-to-end. If you have an existing dev team I can complement them on a specific surface (mobile, regulated overlay, payments) but won&rsquo;t take responsibility for code I didn&rsquo;t write.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Do you sign NDAs and DPAs?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Yes. Mutual NDAs are signed before any sensitive material moves. For regulated work, I sign DPAs and can operate inside your data residency requirements. I&rsquo;ve done this end-to-end with an FCA-regulated business and an IoMFSA-regulated credit union &mdash; the paperwork is familiar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How does payment work?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Fixed-price projects: 40% on signature, 40% at the mid-project milestone, 20% on public cutover. Custom platforms: monthly invoice against a written plan. Site care: monthly direct debit. All invoices on Stripe, in your currency, with a receipt that your accountant can reconcile in thirty seconds.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What happens after launch?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Thirty days of post-launch support and tuning come with every project at no extra cost. After that, you can either take the keys (the repo, content store and Vercel account are already yours) or roll onto Site care at &pound;150/month, which folds hosting, security patches, performance monitoring and content updates into one invoice.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>I don&rsquo;t have a designer. Is that a problem?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>No. The mocks in the proposal show what the rebuilt site will look like &mdash; you sign off on the design before any production code is written. If you have brand assets I&rsquo;ll respect them; if you don&rsquo;t, you&rsquo;ll get a coherent visual language out of the project and own it afterwards.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA: dark band with a real contact form. mailto stays as a fallback link. -->
+    <section class="cta" id="contact">
+      <div class="wrap cta-wrap">
+        <div class="cta-copy">
+          <div class="eyebrow">Start a project</div>
+          <h2 class="display h2">If you can describe it, <em>I can ship it.</em></h2>
+          <p class="lede">
+            Tell me what you&rsquo;re building &mdash; or what you&rsquo;ve already built that
+            isn&rsquo;t working. I&rsquo;ll come back inside two working days with a written
+            assessment and, where it fits, a fixed-price proposal.
+          </p>
+          <div class="cta-meta">
+            <span>Replies within 48h &middot; Mon&ndash;Fri</span>
+            <span>+41 79 787 31 98</span>
+            <span>Or email <a href="mailto:corey@builtbycorey.com">corey@builtbycorey.com</a></span>
+          </div>
+        </div>
+
+        <form class="cta-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+            </label>
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+            </label>
+          </div>
+          <label class="form-field">
+            <span>What are you building?</span>
+            <textarea name="message" rows="5" required placeholder="A sentence or two is enough. URL of the current site if there is one."></textarea>
+          </label>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <span class="submit-label">Send</span>
+              <span class="submit-spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">b</span>
+        <span>built by <em>corey</em> &middot; Z&uuml;rich</span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year">2026</span> Corey Musa</span>
+        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Solidify nav background once user scrolls past the hero rule.
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Contact form: post to /api/contact, show inline status.
+    const form = document.getElementById('contact-form');
+    if (form) {
+      const status = form.querySelector('.form-status');
+      const submit = form.querySelector('.form-submit');
+      const label = form.querySelector('.submit-label');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        // Honeypot: silently drop if filled.
+        if (form.elements.company.value) return;
+        const name = form.elements.name.value.trim();
+        const email = form.elements.email.value.trim();
+        const message = form.elements.message.value.trim();
+        if (!name || !email || !message) {
+          status.textContent = 'All three fields are needed.';
+          status.dataset.state = 'error';
+          return;
+        }
+        submit.disabled = true;
+        submit.dataset.state = 'loading';
+        label.textContent = 'Sending';
+        status.textContent = '';
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message }),
+          });
+          if (!res.ok) {
+            const j = await res.json().catch(() => ({}));
+            throw new Error(j.error || 'Request failed');
+          }
+          status.textContent = "Thanks — I'll reply within 48 hours.";
+          status.dataset.state = 'ok';
+          form.reset();
+          label.textContent = 'Sent';
+          submit.dataset.state = 'sent';
+        } catch (err) {
+          status.textContent = err.message || 'Something went wrong. Email me directly: corey@builtbycorey.com';
+          status.dataset.state = 'error';
+          submit.disabled = false;
+          submit.dataset.state = '';
+          label.textContent = 'Send';
+        }
+      });
+    }
+  </script>
+
+  <!-- Vercel Web Analytics. Loads only on the live domain. -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js" data-route="/"></script>
+
+  <!--
+       _           _ _   _              ___
+      | |__  _   _(_) | |_|  ___  _ __  / __\___  _ __ ___ _   _
+      | '_ \| | | | | | __| / _ \| '_ \/ /  / _ \| '__/ _ \ | | |
+      | |_) | |_| | | | |_ |  __/| |_) / /__| (_) | | |  __/ |_| |
+      |_.__/ \__,_|_|_|\__|_\___|| .__\____/\___/|_|  \___|\__, |
+                                 |_|                       |___/
+
+       You read source? You're hired. corey@builtbycorey.com
+  -->
+
+</body>
+</html>

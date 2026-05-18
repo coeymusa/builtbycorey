@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>OG card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #faf6ef;
+    color: #14181f;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 1200px; height: 630px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    padding: 60px 64px;
+    gap: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 540px; height: 540px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(194,90,58,0.18), transparent 65%);
+  }
+  .left { display: flex; flex-direction: column; gap: 28px; justify-content: center; position: relative; z-index: 1; }
+  .brand {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px; font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #14181f;
+  }
+  .brand em { font-style: italic; color: #c25a3a; font-weight: 500; }
+  .brand-mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: #14181f; color: #c25a3a;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #c25a3a;
+    font-weight: 500;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: #14181f;
+  }
+  h1 em { font-style: italic; color: #c25a3a; font-weight: 500; }
+  .lede {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    line-height: 1.4;
+    color: #4a4f5a;
+    max-width: 48ch;
+  }
+  .url {
+    margin-top: auto;
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #14181f;
+  }
+  .url::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #c25a3a; }
+
+  .right {
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .portrait {
+    width: 380px;
+    aspect-ratio: 4/5;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(20,24,31,0.06), 0 24px 60px rgba(20,24,31,0.18);
+    transform: rotate(-1.6deg);
+    position: relative;
+    background: #f1ead8;
+  }
+  .portrait img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+  }
+  .tag {
+    position: absolute;
+    left: 18px; bottom: 14px;
+    color: #fff;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  }
+  .tag span {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <div class="brand">
+      <span class="brand-mark">b</span>
+      <span>built by <em>corey</em></span>
+    </div>
+    <div class="eyebrow">Independent software · Zürich</div>
+    <h1>Production software for businesses that need it to <em>ship</em>.</h1>
+    <p class="lede">Nine years on Credit Suisse and UBS wealth platforms. Now CTO of a regulated UK credit union, and shipping live products end-to-end.</p>
+    <div class="url">builtbycorey.com</div>
+  </div>
+  <div class="right">
+    <div class="portrait">
+      <img src="../assets/corey.jpg" alt="" />
+      <div class="tag">Corey Musa<span>Senior full-stack engineer</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manx Credit Union · Case study · Built by Corey</title>
+  <meta name="description" content="How the Manx Credit Union platform was built: a single engineer, end-to-end, regulated for the IoMFSA. Member portal, full loan lifecycle, AML/CFT operations, SHA-256 audit chains, regulator inspection-pack export." />
+  <meta property="og:title" content="Manx Credit Union · Case study" />
+  <meta property="og:description" content="A regulated UK credit union, built end-to-end by one engineer. Member portal, loan lifecycle, AML/CFT operations, audit chains, regulator inspection-pack export." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://builtbycorey.com/case/mcu" />
+  <meta property="og:image" content="https://builtbycorey.com/assets/og.jpg" />
+  <meta name="theme-color" content="#faf6ef" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1219'/%3E%3Ctext x='50%25' y='62%25' font-family='Georgia, serif' font-size='20' fill='%23c25a3a' text-anchor='middle' font-style='italic' font-weight='600'%3Eb%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-18d" />
+  <style>
+    /* Case study scaffolding — overlays the global styles. */
+    .case-study { padding-top: clamp(48px, 6vw, 72px); }
+    .case-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--ff-mono); font-size: 11px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--ink-mid); margin-bottom: 24px;
+    }
+    .case-back:hover { color: var(--accent); }
+    .case-masthead { max-width: 880px; }
+    .case-masthead .eyebrow { display: inline-block; margin-bottom: 1.25rem; }
+    .case-masthead h1 {
+      font-family: var(--ff-display);
+      font-weight: 500;
+      font-size: clamp(2.6rem, 5.6vw, 4.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin: 0 0 1.25rem;
+    }
+    .case-masthead h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .case-masthead .lede { max-width: 64ch; }
+
+    .case-stats {
+      list-style: none; padding: 0; margin: 2.5rem 0 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      border-top: 1px solid var(--rule-strong);
+      border-bottom: 1px solid var(--rule-strong);
+      padding: 28px 0;
+    }
+    @media (max-width: 760px) { .case-stats { grid-template-columns: repeat(2, 1fr); } }
+    .case-stats li { display: flex; flex-direction: column; gap: 6px; }
+    .case-stats b {
+      font-family: var(--ff-display);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .case-stats span { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.4; }
+
+    .case-grid { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; padding: clamp(40px, 5vw, 72px) 0; border-bottom: 1px solid var(--rule); }
+    .case-grid:last-of-type { border-bottom: 0; }
+    @media (max-width: 800px) { .case-grid { grid-template-columns: 1fr; } }
+    .case-grid header { display: flex; flex-direction: column; gap: 10px; }
+    .case-grid h2 {
+      font-family: var(--ff-display);
+      font-weight: 600;
+      font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.15;
+    }
+    .case-grid h2 em { font-style: italic; color: var(--accent); font-weight: 600; }
+    .case-grid > div p { font-size: 1.02rem; line-height: 1.65; color: var(--ink-mid); margin: 0 0 14px; max-width: 70ch; }
+    .case-grid > div p:last-child { margin-bottom: 0; }
+    .case-grid > div p b { color: var(--ink); font-weight: 600; }
+
+    .case-bullets {
+      list-style: none; padding: 0; margin: 12px 0 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .case-bullets li {
+      position: relative; padding-left: 22px;
+      font-size: 0.98rem; line-height: 1.6; color: var(--ink-mid);
+    }
+    .case-bullets li::before {
+      content: ''; position: absolute; left: 0; top: 11px;
+      width: 12px; height: 1.5px; background: var(--accent); border-radius: 2px;
+    }
+    .case-bullets li b { color: var(--ink); font-weight: 600; }
+
+    .case-quote {
+      margin: 0; padding: clamp(40px, 5vw, 72px) 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--ff-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      line-height: 1.35;
+      color: var(--ink);
+      max-width: 22ch;
+    }
+    .case-quote em { font-style: italic; color: var(--accent); }
+    .case-quote-by {
+      font-family: var(--ff-mono); font-size: 11px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--ink-soft); margin-top: 14px;
+    }
+
+    .case-tail {
+      padding: clamp(40px, 5vw, 64px) 0;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 24px;
+    }
+    .case-tail p { margin: 0; color: var(--ink-mid); font-family: var(--ff-display); font-size: 1.2rem; max-width: 32ch; }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark">b</span>
+        <span class="brand-word">built by <em>corey</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#work">Work</a>
+        <a href="/#process">Principles</a>
+        <a href="/#places">Places</a>
+        <a href="/#about">About</a>
+      </nav>
+      <a class="btn btn-sm" href="/#contact">Start a project</a>
+    </div>
+  </header>
+
+  <main class="case-study">
+
+    <section class="section">
+      <div class="wrap">
+        <a class="case-back" href="/#work">&larr; All work</a>
+
+        <header class="case-masthead">
+          <div class="rule">
+            <span class="folio">Case study &middot; &sect;01</span>
+            <span class="eyebrow">Regulated platform &middot; 2025&ndash;</span>
+          </div>
+          <h1>The operating system of a <em>regulated</em> credit union.</h1>
+          <p class="lede">
+            Manx Credit Union is a fully IoMFSA-regulated UK credit union. I am the co-founder
+            and CTO. I built the entire platform &mdash; member portal, staff stack, regulator
+            overlay, audit pipeline &mdash; on my own, end to end, from architecture through
+            production deployment.
+          </p>
+        </header>
+
+        <ul class="case-stats">
+          <li><b>1</b><span>Engineer on the build, end-to-end</span></li>
+          <li><b>11</b><span>In-product AML training modules, 270 scenario questions</span></li>
+          <li><b>4-eyes</b><span>Approval gates on every high-risk action</span></li>
+          <li><b>1-click</b><span>Inspection-pack export for IoMFSA visits</span></li>
+        </ul>
+
+        <article class="case-grid">
+          <header><h2 class="display">The <em>brief</em></h2></header>
+          <div>
+            <p>
+              Build an entire regulated financial institution&rsquo;s technology stack from
+              scratch. The platform is the operating system of the firm &mdash; a member portal
+              for savings and loans alongside a staff stack that runs every step of the
+              credit-union lifecycle. End-to-end ownership from architecture through production.
+            </p>
+            <p>
+              The constraint that shapes everything: the IoMFSA Designated Businesses Act and
+              the FCA&rsquo;s Consumer Duty don&rsquo;t scale down. The same audit, retention,
+              and inspection-readiness expectations apply whether you have a thousand members
+              or a hundred thousand.
+            </p>
+          </div>
+        </article>
+
+        <article class="case-grid">
+          <header><h2 class="display">What <em>shipped</em></h2></header>
+          <div>
+            <p>
+              A working credit union. The full loan lifecycle from application to arrears, a
+              digital onboarding pipeline alongside a walk-in / no-contact financial-inclusion
+              path, real-time treasury and savings operations, and a regulated overlay sitting
+              over all of it.
+            </p>
+            <ul class="case-bullets">
+              <li><b>Loan lifecycle.</b> Application, automated affordability and risk-tier assessment, credit-bureau pull and archive, interview scheduling, committee decisioning, cashier disbursement, scheduled repayment, and arrears handling.</li>
+              <li><b>Onboarding.</b> Photographic ID and proof-of-address pipelines, plus a walk-in / no-contact financial-inclusion path with proxy contact and four-eyes approval under the IoMFSA Designated Businesses Act.</li>
+              <li><b>Treasury &amp; savings.</b> Accounts, payments, statements, and open-banking integration via Yapily for income verification and affordability inputs.</li>
+              <li><b>Regulated overlay.</b> AML/CFT operations (SAR queue, OFSI sanctions, PEP and adverse-media triage with daily re-screening); KYC and CDD audit trails; vulnerable-customer flagging under CONC 1.2 / FCA Consumer Duty; DSAR bundling; SHA-256 hash chains across audit, training, and credit-bureau records; category-specific retention engine; one-click inspection-pack export.</li>
+              <li><b>Training, in product.</b> Eleven AML training modules, 270 scenario-based questions, version-pinned attestation. Staff are tested on the same surface they operate.</li>
+              <li><b>Real-time member experience.</b> WebSocket / STOMP with backend-driven workspace configuration and an embedded support chatbot.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case-grid">
+          <header><h2 class="display">The <em>stack</em></h2></header>
+          <div>
+            <ul class="case-bullets">
+              <li><b>Frontend.</b> Angular 19 with RxJS, micro-frontend architecture, custom design system, Jasmine / Karma. The same shared-library pattern adopted across multiple business units when I led it at UBS.</li>
+              <li><b>Backend.</b> Spring Boot 3.2 on Java 21, clean architecture, PostgreSQL / JPA, JUnit / TDD. Async processing for the retention and sanctions queues.</li>
+              <li><b>Auth.</b> Custom Spring Authorization Server for OAuth2 / OIDC, with SMS OTP and device out-of-band patterns ported from the Backbase payments-security work.</li>
+              <li><b>Open banking.</b> Yapily integration for affordability inputs and income verification.</li>
+              <li><b>Realtime.</b> WebSocket / STOMP with backend-driven workspace configuration.</li>
+              <li><b>Audit.</b> Tamper-evident SHA-256 hash chains across audit, training, and credit-bureau records. Category-specific retention engine.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case-grid">
+          <header><h2 class="display">Why it <em>matters</em></h2></header>
+          <div>
+            <p>
+              Regulators ask for evidence, not assurances. The platform is built so the answer
+              to every IoMFSA question is one click away: which staff member completed which
+              training module, in which version, at which timestamp; every CDD review and its
+              outcome; every sanctions hit and its disposition; every loan&rsquo;s entire
+              decision chain.
+            </p>
+            <p>
+              The same discipline is portable. The audit-chain, retention-engine and
+              inspection-pack patterns travel to fintech, healthcare, and anywhere else the
+              answer to <i>how did this decision happen</i> matters.
+            </p>
+          </div>
+        </article>
+
+        <blockquote class="case-quote">
+          The platform is the operating system of the firm &mdash; <em>built so the regulator&rsquo;s questions answer themselves.</em>
+          <div class="case-quote-by">&mdash; The brief, condensed</div>
+        </blockquote>
+
+        <div class="case-tail">
+          <p>Want a platform built to this standard?</p>
+          <a class="btn btn-primary btn-lg" href="/#contact">Start a project</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">b</span>
+        <span>built by <em>corey</em> &middot; Z&uuml;rich</span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year">2026</span> Corey Musa</span>
+        <a href="https://coreyscodecave.com" target="_blank" rel="noopener">coreyscodecave.com</a>
+        <a href="https://github.com/coeymusa" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/corey-musa" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+</body>
+</html>
